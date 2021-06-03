@@ -1,0 +1,5 @@
+docker-compose run web alembic revision -m "migration1" --autogenerate
+
+docker-compose run web alembic upgrade head
+
+docker-compose up --build --remove-orphans
